@@ -1,0 +1,399 @@
+:root{
+  --bg: #f3ede5;
+  --panel: rgba(242, 232, 220, 0.95);
+  --text: #1f1a17;
+  --muted: #6f655d;
+  --gold: #d4a62a;
+  --blue: #e5e5e5;
+  --blue-card: #e9eef7;
+  --blue-text: #16243a;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page{
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.brand-wrap{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.brand{
+  font-size: 28px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.stars{
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.nav{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-family: Georgia, serif;
+}
+
+.nav a{
+  text-decoration: none;
+  color: var(--text);
+  font-size: 20px;
+}
+
+.phone{
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.hero{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+.left{
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.left::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--panel);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+.eyebrow{
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.title{
+  font-family: Georgia, serif;
+  font-size: 60px;
+  line-height: 1;
+  margin: 0 0 20px;
+  max-width: 700px;
+}
+
+.cta{
+  background: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  width: fit-content;
+  display: inline-block;
+}
+
+.right{
+  background: url("./myphoto.jpg") center/cover no-repeat;
+  min-height: 600px;
+}
+
+.features{
+  background: var(--blue);
+  padding: 52px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+}
+
+.feature-card{
+  background: var(--blue-card);
+  border-radius: 40px;
+  padding: 38px 28px;
+  text-align: center;
+  color: var(--blue-text);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.icon{
+  font-size: 44px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.feature-card h3{
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+
+.feature-card p{
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.section{
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.price-box{
+  display: inline-block;
+  background: rgba(255,255,255,0.45);
+  padding: 24px 34px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.service{
+  font-size: 28px;
+  font-family: Georgia, serif;
+  margin-bottom: 8px;
+}
+
+.price{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.contact-section h2{
+  font-family: Georgia, serif;
+  font-size: 40px;
+  margin: 0 0 30px;
+}
+
+.contact-grid{
+  max-width: 1200px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.contact-card{
+  background: rgba(255,255,255,0.6);
+  border-radius: 18px;
+  padding: 28px 22px;
+  min-height: 150px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.contact-card h3{
+  margin: 0 0 14px;
+  font-family: Georgia, serif;
+  font-size: 26px;
+}
+
+.contact-card a{
+  color: var(--text);
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px){
+  .hero{
+    grid-template-columns: 1fr;
+  }
+
+  .right{
+    min-height: 420px;
+  }
+
+  .features{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .header{
+    flex-wrap: wrap;
+  }
+
+  .nav{
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 700px){
+  .page{
+    padding: 14px;
+  }
+
+  .brand{
+    font-size: 22px;
+  }
+
+  .title{
+    font-size: 42px;
+  }
+
+  .features{
+    grid-template-columns: 1fr;
+    padding: 28px 18px;
+    gap: 18px;
+  }
+
+  .feature-card{
+    border-radius: 28px;
+    min-height: 220px;
+  }
+
+  .section{
+    padding: 60px 14px;
+  }
+
+  .service{
+    font-size: 24px;
+  }
+
+  .price{
+    font-size: 22px;
+  }
+}
+.badges-section{
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.badges-section h2{
+  font-family: Georgia, serif;
+  font-size: 40px;
+  margin: 0 0 30px;
+}
+
+.badges-grid{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.badge-item{
+  background: rgba(255,255,255,0.55);
+  border-radius: 18px;
+  padding: 18px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.badge-item img{
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.badge-item span{
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+@media (max-width: 1100px){
+  .badges-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px){
+  .badges-section{
+    padding: 50px 14px;
+  }
+
+  .badges-grid{
+    grid-template-columns: 1fr;
+  }
+}
+.badges-text{
+  margin-top: 50px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.badge-text-item{
+  background: rgba(255,255,255,0.55);
+  padding: 24px 26px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.badge-text-item h3{
+  font-family: Georgia, serif;
+  font-size: 26px;
+  margin: 0 0 10px;
+}
+
+.badge-text-item p{
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--muted);
+}
