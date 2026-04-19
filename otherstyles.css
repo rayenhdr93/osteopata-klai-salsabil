@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+/* Layout */
+.hero {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left side */
+.hero-left {
+  width: 50%;
+  background-color: #e8ded4; /* beige */
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right side */
+.hero-right {
+  width: 50%;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text styles */
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.hero-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+/* Button */
+.track-booking {
+  display: inline-block;
+  background: white;
+  padding: 14px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+.hero {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  width: 50%;
+  background-color: #e8ded4;
+  padding: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow-y: auto; /* ✅ allows scroll if text is long */
+}
+
+/* TEXT */
+.hero-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 500px;
+
+  overflow-wrap: break-word; /* ✅ prevents overflow */
+}
+
+/* TITLE */
+.hero-title {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  width: 50%;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-left {
+  padding-top: 120px;
+}
