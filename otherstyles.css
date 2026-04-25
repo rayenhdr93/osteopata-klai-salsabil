@@ -116,3 +116,32 @@ body {
 .hero-left {
   padding-top: 120px;
 }
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* stack */
+    text-align: center;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cta {
+    width: 100%; /* button full width */
+  }
+}
+h1 {
+  font-size: 48px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+}
